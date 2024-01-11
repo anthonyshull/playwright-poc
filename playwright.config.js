@@ -1,7 +1,5 @@
 const { defineConfig, devices } = require('@playwright/test');
 
-const TARGET_URL = process.env.E2E_URL || 'http://localhost:4001';
-
 module.exports = defineConfig({
   testDir: './e2e-tests',
   /* Run tests in files in parallel */
@@ -17,7 +15,7 @@ module.exports = defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
-    baseURL: TARGET_URL,
+    baseURL: process.env.TARGET_URL,
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
