@@ -1,17 +1,21 @@
-`npx playwright test`
-Runs the end-to-end tests.
+### Setup
 
-`npx playwright test --ui`
-Starts the interactive UI mode.
+Both Playwright and Artillery need a target URL to be set.
 
-`npx playwright test --project=chromium`
-Runs the tests only on Desktop Chrome.
+```
+%> export TARGET_URL=http://localhost:4001
+```
 
-`npx playwright test example`
-Runs the tests in a specific file.
+### Playwright
 
-`npx playwright test --debug`
-Runs the tests in debug mode.
+```
+%> npx playwright test all-scenarios
+```
 
-`npx playwright codegen`
-Auto generate tests with Codegen.
+### Artillery
+
+Run all scenarios in a load test:
+
+```
+%> npx artillery run load-tests/all-scenarios.yml --target $TARGET_URL
+```
