@@ -19,4 +19,4 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps chromium
     - name: Run the monitor
-      run: node monitors/critical-user-journeys.js
+      run: node monitors/all-scenarios.js
