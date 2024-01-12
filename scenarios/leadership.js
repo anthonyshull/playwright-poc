@@ -2,7 +2,7 @@ const { expect } = require('@playwright/test');
 
 exports.scenario = {
    name: 'Load the leadership page',
-   run: async function scenario({ page, baseURL}) {
+   run: async ({ page, baseURL }) => {
     await page.goto(`${baseURL}/`);
 
     await page.getByRole('button', { name: 'About' }).click();
