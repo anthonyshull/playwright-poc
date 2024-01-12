@@ -8,7 +8,7 @@ jobs:
     timeout-minutes: 5
     runs-on: ubuntu-latest
     env:
-      TARGET_URL: https://mbta.com
+      TARGET_URL: https://www.mbta.com
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-node@v3
