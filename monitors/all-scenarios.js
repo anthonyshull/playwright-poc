@@ -22,7 +22,7 @@ files.forEach((file) => {
         const end = performance.now();
         const duration = end - start;
     
-        console.log(`Scenario: "${scenario.name}" took ${duration}ms`);
+        console.log(`Scenario: "${scenario.name}" took ${Math.floor(duration)}ms`);
 
         await browser.close();
     })();
