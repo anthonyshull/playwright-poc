@@ -18,5 +18,7 @@ jobs:
         node-version: 21
     - name: Install dependencies
       run: npm ci
+    - name: Install Playwright Browsers
+      run: npx playwright install
     - name: Run the monitor
       run: node monitors/all-scenarios.js
