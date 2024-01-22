@@ -18,9 +18,9 @@ jobs:
         node-version: 21
         cache: 'npm'
     - uses: actions/cache@v3
-        with:
-          path: '~/.npm'
-          key: ${{ runner.os }}-${{ matrix.node-version }}-9.8.0-npmcache-${{ hashFiles('**/package-lock.json') }}
+      with:
+        path: '~/.npm'
+        key: ${{ runner.os }}-${{ matrix.node-version }}-9.8.0-npmcache-${{ hashFiles('**/package-lock.json') }}
     - name: Install dependencies
       run: npm ci
     - name: Install Playwright Browsers
